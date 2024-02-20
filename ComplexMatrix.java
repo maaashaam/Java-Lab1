@@ -70,10 +70,10 @@ public class ComplexMatrix {
     }
 
     public static ComplexMatrix TransComplexMatrix(ComplexMatrix matrix) {
-        ComplexMatrix result = new ComplexMatrix(matrix.rows, matrix.columns);
+        ComplexMatrix result = new ComplexMatrix(matrix.columns, matrix.rows);
 
-        for (int i = 0; i < matrix.rows; i++) {
-            for (int j = 0; j < matrix.columns; j++) {
+        for (int i = 0; i < matrix.columns; i++) {
+            for (int j = 0; j < matrix.rows; j++) {
                 result.ComplexMatrix[i][j] = matrix.ComplexMatrix[j][i];
             }
         }
